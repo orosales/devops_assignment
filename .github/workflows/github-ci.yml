@@ -2,11 +2,7 @@ name: GitHubAction_Devops_Assigment
 
 on:
   push:
-    branches:
-      - main, master  
   pull_request:
-    branches:
-      - main, master
 
 env:
   BACKEND_IMAGE_NAME: orosalesca/backend_assignment_api
