@@ -15,7 +15,7 @@ jobs:
     steps:
       # Checkout the repository
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           python-version: 3.9
 
@@ -37,7 +37,7 @@ jobs:
           docker run --rm -d --name backend-test -p 5000:5000 $BACKEND_IMAGE_NAME:latest
           # Add your tests here, e.g., curl to the app
           sleep 15 # Ensure container is running
-          curl -f http://localhost:5000 || (docker logs backend-test && exit 1)
+          curl -f http://localhost:5000/api/test || (docker logs backend-test && exit 1)
           docker stop backend-test
 
       # Push the backend Docker image
