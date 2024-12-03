@@ -1,0 +1,15 @@
+#First steps to test my images
+
+docker build -t orosalesca/backend_assignment_api:1.0  .
+docker run -d -p 5000:5000 --name bakend-container orosalesca/backend_assignment_api:1.0
+
+----------------------------------------------------------------------------------------
+
+docker build -t orosalesca/frontend_assignment_react:1.0  .
+docker run -d -p 3000:3000 --name frontend-container orosalesca/frontend_assignment_react:1.0
+
+
+docker login
+docker push orosalesca/frontend_assignment_react:1.0
+docker push orosalesca/backend_assignment_api:1.0
+
