@@ -98,8 +98,10 @@ function App() {
     if (first_operand === null || current_operation === null) return;
 
     try {
+      const apiBaseUrl = process.env.REACT_APP_BACKEND_URL || 'http://backend:5000/api';
+
       // Request backend API with operands and operation type to get results
-      const api_response = await axios.post(`http://localhost:5000/api/${current_operation}`, {
+      const api_response = await axios.post(`${apiBaseUrl}/${current_operation}`, {
         number_1: first_operand,
         number_2: parseFloat(calculator_display)
       });

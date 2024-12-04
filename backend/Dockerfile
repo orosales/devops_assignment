@@ -15,7 +15,6 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 # Define environment variable
-ENV PORT=5000
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
