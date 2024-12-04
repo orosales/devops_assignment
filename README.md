@@ -111,6 +111,8 @@ frontend runs in the port 3000 and it uses the network app-network
 ### Assumptions
 
 - List any assumptions you made while creating the Dockerfiles, `docker-compose.yml`, or CI/CD pipeline. 
+    - FrontEnd is running in port 3000
+    - BackEnd is running in port 5000 
 
 
 ### Lessons Learned
